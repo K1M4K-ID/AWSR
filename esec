@@ -51,11 +51,9 @@ exit;
 function req(){
 # apus result
 if [ -f $path/result/hasil.txt ]; then
-                        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m path is already exists!\n"
 			rm -fr $path/result/hasil.txt &> /dev/null
                         sleep 0.25
                         else
-                        #printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m reset config.!! {pakyu!!}\n"
                         sleep 0.25
                         rm -fr $path/result/hasil.txt &> /dev/null
 			sleep 0.25
@@ -63,69 +61,73 @@ if [ -f $path/result/hasil.txt ]; then
 fi
 # patch data result
 if [ -d $path/result ]; then
-			#printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m path is already exists!\n"
 			sleep 0.25
 			else
 			printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m setup path & directory!\n"
 			mkdir -p $path/result
 
 fi
+# template-nuclei
+if [ -d $path/nuclei-templates ]; then
+	sleep 0.025
+	else
+	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing nuclei-templates..\n"
+	git clone https://github.com/projectdiscovery/nuclei-templates &> /dev/null
+	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing successfully..!!\n"
+	sleep 3
+fi
+	
 # httpx
 if [ -f /usr/bin/httpx ]; then
-	#printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Httpx is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
 	sleep 0.25
 	else
-	printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Httpx is not installed\n"
+	printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m httpx is not installed\n"
 	sleep 0.025s
-	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Httpx..\n"
+	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Httpx..\n"
 	sudo apt-get install httpx -y &> /dev/null
 	sleep 0.025s
 fi
 sleep 0.1
 # assetfinder
 if [ -f /usr/bin/assetfinder ]; then
-        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Assetfinder is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Assetfinder is not installed\n"
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m assetfinder is not installed\n"
         sleep 0.025s
-        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Assetfinder..\n"
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Assetfinder..\n"
         sudo apt-get install assetfinder -y &> /dev/null
         sleep 0.025s
 fi
 sleep 0.1
 # nuclei
 if [ -f /usr/bin/nuclei ]; then
-        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Nuclei is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Nuclei is not installed\n"
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m nuclei is not installed\n"
         sleep 0.025s
-        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Nuclei..\n"
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Nuclei..\n"
         sudo apt-get install nuclei -y &> /dev/null
         sleep 0.025s
 fi
 sleep 0.1
 # subfinder
 if [ -f /usr/bin/subfinder ]; then
-        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Subfinder is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Subfinder is not installed\n"
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m subfinder is not installed\n"
         sleep 0.025s
-        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Subfinder..\n"
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Subfinder..\n"
         sudo apt-get install subfinder -y &> /dev/null
         sleep 0.025s
 fi
 sleep 0.1
 # jq
 if [ -f /usr/bin/jq ]; then
-        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Jq is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Jq is not installed\n"
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m jq is not installed\n"
         sleep 0.025s
-        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Jq..\n"
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Jq..\n"
         sudo apt-get install jq -y &> /dev/null
         sleep 0.025s
 fi
