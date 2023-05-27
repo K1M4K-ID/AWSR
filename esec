@@ -1,0 +1,147 @@
+# !/bin/bash
+# automate find vulnerabelity
+# create by K1M4K-ID
+# projectdiscovery
+# settingan
+path=$(pwd)
+bul=$(date +"%B")
+tan=$(date +"%d")
+tim=$(date +"%T")
+yer=$(date +"%Y")
+waktu=$(printf "\033[36;1m$bul \033[31;1m$tan \033[37;1m$tim \033[31;1m$yer")
+# clear layar
+clear
+# header
+logo(){
+printf "\033[31;3m""""
+▀█████████▄  ████████▄     ▄████████   ▄▄▄▄███▄▄▄▄   
+  ███    ███ ███   ▀███   ███    ███ ▄██▀▀▀███▀▀▀██▄ 
+  ███    ███ ███    ███   ███    █▀  ███   ███   ███ 
+ ▄███▄▄▄██▀  ███    ███   ███        ███   ███   ███ 
+▀▀███▀▀▀██▄  ███    ███ ▀███████████ ███   ███   ███ 
+  ███    ██▄ ███    ███          ███ ███   ███   ███ 
+  ███    ███ ███   ▄███    ▄█    ███ ███   ███   ███ 
+▄█████████▀  ████████▀   ▄████████▀   ▀█   ███   █▀  
+                                                     
+	    Project Discovery - V.1
+	  Automate Find Vulnerability 
+	    {$waktu}
+	
+
+"""
+}
+function remove()
+{
+   rm -fr $path/result/*.txt &> /dev/null
+}
+# trap
+trap ctrl_c INT
+ctrl_c(){
+clear
+echo
+printf "\033[34;1m<./>\033[37;1m Ctrl+C \033[34;1m<./>\033[34;1m Detected, Trying To Exit.. \033[37;1m\n"
+sleep 1
+remove
+sleep 1
+printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[34;1m Thank you, for use this tools :) \033[37;1m\n"
+sleep 1
+exit;
+}
+# requirement
+function req(){
+# apus result
+if [ -f $path/result/hasil.txt ]; then
+                        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m path is already exists!\n"
+			rm -fr $path/result/hasil.txt &> /dev/null
+                        sleep 0.25
+                        else
+                        #printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m reset config.!! {pakyu!!}\n"
+                        sleep 0.25
+                        rm -fr $path/result/hasil.txt &> /dev/null
+			sleep 0.25
+
+fi
+# patch data result
+if [ -d $path/result ]; then
+			#printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m path is already exists!\n"
+			sleep 0.25
+			else
+			printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m setup path & directory!\n"
+			mkdir -p $path/result
+
+fi
+# httpx
+if [ -f /usr/bin/httpx ]; then
+	#printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Httpx is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
+	sleep 0.25
+	else
+	printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Httpx is not installed\n"
+	sleep 0.025s
+	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Httpx..\n"
+	sudo apt-get install httpx -y &> /dev/null
+	sleep 0.025s
+fi
+sleep 0.1
+# assetfinder
+if [ -f /usr/bin/assetfinder ]; then
+        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Assetfinder is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
+	sleep 0.25
+        else
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Assetfinder is not installed\n"
+        sleep 0.025s
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Assetfinder..\n"
+        sudo apt-get install assetfinder -y &> /dev/null
+        sleep 0.025s
+fi
+sleep 0.1
+# nuclei
+if [ -f /usr/bin/nuclei ]; then
+        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Nuclei is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
+	sleep 0.25
+        else
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Nuclei is not installed\n"
+        sleep 0.025s
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Nuclei..\n"
+        sudo apt-get install nuclei -y &> /dev/null
+        sleep 0.025s
+fi
+sleep 0.1
+# subfinder
+if [ -f /usr/bin/subfinder ]; then
+        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Subfinder is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
+	sleep 0.25
+        else
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Subfinder is not installed\n"
+        sleep 0.025s
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Subfinder..\n"
+        sudo apt-get install subfinder -y &> /dev/null
+        sleep 0.025s
+fi
+sleep 0.1
+# jq
+if [ -f /usr/bin/jq ]; then
+        #printf "\033[31;1m[\033[32;1mOK\033[31;1m]\033[37;1m Jq is ready to installed, \033[31;1m{\033[37;1mPakyu!!\033[31;1m}\n"
+	sleep 0.25
+        else
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m Jq is not installed\n"
+        sleep 0.025s
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m Installing Jq..\n"
+        sudo apt-get install jq -y &> /dev/null
+        sleep 0.025s
+fi
+sleep 0.1
+}
+# input target > domain.com
+function runner(){
+logo
+req
+sleep 1
+clear
+logo
+echo -e "\033[37;1m<./> masukan domain target, pakyu!! <./>"
+read -p "$(printf "\033[31;1m{\033[34;1m#\033[31;1m} $USER   "'\033[34;1m')" target
+assetfinder -subs-only $target | tee -a $path/result/hasil.txt &> /dev/null
+printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m starting scanning..!! please wait 20-40 minutes..\n"
+nuclei -l $path/result/hasil.txt -t nuclei-templates -silent -attack-type pitchfork -severity medium, high, critical, unknown -output $path/result/vuln-hitler.txt
+}
+runner
