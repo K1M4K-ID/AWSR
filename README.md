@@ -31,7 +31,7 @@ Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder {
 ```
 
 
-## instalation For Kali Linux, Parrot Os, Nethunter, Ubuntu, Debian, Android
+## Instalation For Kali Linux, Parrot Os, Nethunter, Ubuntu, Debian, Android
 ```
 * cloning tools
 - git clone https://github.com/K1M4K-ID/BDSM
@@ -44,7 +44,8 @@ Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder {
 
 ```
 
-
+## NOTE!!
+Jika anda menggunakan android, anda harus memberikan komentar pada bagian, assetfinder di line 152
 
 
 
