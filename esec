@@ -79,61 +79,61 @@ if [ -d $path/nuclei-templates ]; then
 fi
 	
 # httpx
-if [ -f /usr/bin/httpx ] || [ -f /usr/local/bin/httpx ] || [ -f ${PREFIX}/bin/httpx ]; then
+if [[ -f ${PREFIX}/bin/httpx ]]; then
 	sleep 0.25
 	else
 	printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m httpx is not installed\n"
 	sleep 0.025s
 	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Httpx..\n"
 	go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest &> /dev/null
-	cp ~/go/bin/httpx /usr/bin;cp ~/go/bin/httpx /usr/local/bin;cp ~/go/bin/httpx ${PREIFX}/bin &> /dev/null
+	cp ~/go/bin/httpx /usr/bin &>/dev/null;cp ~/go/bin/httpx /usr/local/bin &>/dev/null;cp ~/go/bin/httpx ${PREFIX}/bin &> /dev/null
         sleep 0.025s
 fi
 sleep 0.1
 # assetfinder
-if [ -f /usr/bin/assetfinder ] || [ -f /usr/local/bin/assetfinder ] || [ -f ${PREFIX}/bin/assetfinder ]; then
+if [[ -f /usr/bin/assetfinder ]] || [[ -f /usr/local/bin/assetfinder ]] || [[ -f ${PREFIX}/bin/assetfinder ]]; then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m assetfinder is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Assetfinder..\n"
         go install -v github.com/tomnomnom/assetfinder@latest &> /dev/null
-        cp ~/go/bin/assetfinder /usr/bin;cp ~/go/bin/assetfinder /usr/local/bin;cp ~/go/bin/assetfinder ${PREIFX}/bin &> /dev/null
+        cp ~/go/bin/assetfinder /usr/bin &>/dev/null;cp ~/go/bin/assetfinder /usr/local/bin &>/dev/null;cp ~/go/bin/assetfinder ${PREFIX}/bin &>/dev/null
         sleep 0.025s
 fi
 sleep 0.1
 # nuclei
-if [ -f /usr/bin/nuclei ] || [ -f /usr/local/bin/nuclei ] || [ -f ${PREFIX}/bin/nuclei ]; then
+if [[ -f /usr/bin/nuclei ]] || [[ -f /usr/local/bin/nuclei ]] || [[ -f ${PREFIX}/bin/nuclei ]]; then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m nuclei is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Nuclei..\n"
         go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest &> /dev/null
-        cp ~/go/bin/nuclei /usr/bin;cp ~/go/bin/nuclei /usr/local/bin;cp ~/go/bin/nuclei ${PREIFX}/bin &> /dev/null
+        cp ~/go/bin/nuclei /usr/bin &>/dev/null;cp ~/go/bin/nuclei /usr/local/bin &>/dev/null;cp ~/go/bin/nuclei ${PREFIX}/bin &>/dev/null
         sleep 0.025s
 fi
 sleep 0.1
 # subfinder
-if [ -f /usr/bin/subfinder ] || [ -f /usr/local/bin/subfinder ] || [ -f ${PREFIX}/bin/subfinder ]; then
+if [[ -f /usr/bin/subfinder ]] || [[ -f /usr/local/bin/subfinder ]] || [[ -f ${PREFIX}/bin/subfinder ]]; then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m subfinder is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing subfinder..\n"
         go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest &> /dev/null
-        cp ~/go/bin/subfinder /usr/bin;cp ~/go/bin/subfinder /usr/local/bin;cp ~/go/bin/subfinder ${PREIFX}/bin &> /dev/null
+        cp ~/go/bin/subfinder /usr/bin &>/dev/null;cp ~/go/bin/subfinder /usr/local/bin &>/dev/null;cp ~/go/bin/subfinder ${PREFIX}/bin &>/dev/null
         sleep 0.025s
 fi
 sleep 0.1
 # jq
-if [ -f /usr/bin/jq ] || [ -f /usr/local/bin/jq ] || [ -f ${PREFIX}/bin/jq ]; then
+if [[ -f /usr/bin/jq ]] || [[ -f /usr/local/bin/jq ]] || [[ -f ${PREFIX}/bin/jq ]];then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m jq is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Jq..\n"
-        sudo apt-get install jq -y;apt install jq -y &> /dev/null
+        sudo apt-get install jq -y &>/dev/null;apt install jq -y &>/dev/null
         sleep 0.025s
 fi
 sleep 0.1
@@ -156,3 +156,4 @@ printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m starting scanning..!! please
 nuclei -l $path/result/hasil.txt -t nuclei-templates -silent -attack-type pitchfork -severity medium, high, critical, unknown -output $path/result/vuln-hitler.txt
 }
 runner
+
