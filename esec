@@ -79,7 +79,7 @@ if [ -d $path/nuclei-templates ]; then
 fi
 	
 # httpx
-if [ -f /usr/bin/httpx ] || [ -f /usr/local/bin/httpx ] || [ ${PREFIX}/bin/httpx ]; then
+if [ -f /usr/bin/httpx ] || [ -f /usr/local/bin/httpx ] || [ -f ${PREFIX}/bin/httpx ]; then
 	sleep 0.25
 	else
 	printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m httpx is not installed\n"
@@ -91,7 +91,7 @@ if [ -f /usr/bin/httpx ] || [ -f /usr/local/bin/httpx ] || [ ${PREFIX}/bin/httpx
 fi
 sleep 0.1
 # assetfinder
-if [ -f /usr/bin/assetfinder ] || [ -f /usr/local/bin/assetfinder ] || [ ${PREFIX}/bin/assetfinder ]; then
+if [ -f /usr/bin/assetfinder ] || [ -f /usr/local/bin/assetfinder ] || [ -f ${PREFIX}/bin/assetfinder ]; then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m assetfinder is not installed\n"
@@ -103,7 +103,7 @@ if [ -f /usr/bin/assetfinder ] || [ -f /usr/local/bin/assetfinder ] || [ ${PREFI
 fi
 sleep 0.1
 # nuclei
-if [ -f /usr/bin/nuclei ] || [ -f /usr/local/bin/nuclei ] || [ ${PREFIX}/bin/nuclei ]; then
+if [ -f /usr/bin/nuclei ] || [ -f /usr/local/bin/nuclei ] || [ -f ${PREFIX}/bin/nuclei ]; then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m nuclei is not installed\n"
@@ -115,7 +115,7 @@ if [ -f /usr/bin/nuclei ] || [ -f /usr/local/bin/nuclei ] || [ ${PREFIX}/bin/nuc
 fi
 sleep 0.1
 # subfinder
-if [ -f /usr/bin/subfinder ] || [ -f /usr/local/bin/subfinder ] || [ ${PREFIX}/bin/subfinder ]; then
+if [ -f /usr/bin/subfinder ] || [ -f /usr/local/bin/subfinder ] || [ -f ${PREFIX}/bin/subfinder ]; then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m subfinder is not installed\n"
@@ -127,7 +127,7 @@ if [ -f /usr/bin/subfinder ] || [ -f /usr/local/bin/subfinder ] || [ ${PREFIX}/b
 fi
 sleep 0.1
 # jq
-if [ -f /usr/bin/jq ] || [ -f /usr/local/bin/jq ] || [ ${PREFIX}/bin/jq ]; then
+if [ -f /usr/bin/jq ] || [ -f /usr/local/bin/jq ] || [ -f ${PREFIX}/bin/jq ]; then
 	sleep 0.25
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m jq is not installed\n"
