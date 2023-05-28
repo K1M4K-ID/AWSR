@@ -120,7 +120,7 @@ if [ -f /usr/bin/subfinder ] || [ -f /usr/local/bin/subfinder ] || [ ${PREFIX}/b
         else
         printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m subfinder is not installed\n"
         sleep 0.025s
-        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Subfinder..\n"
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing subfinder..\n"
         go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest &> /dev/null
         cp ~/go/bin/subfinder /usr/bin;cp ~/go/bin/subfinder /usr/local/bin;cp ~/go/bin/subfinder ${PREIFX}/bin &> /dev/null
         sleep 0.025s
