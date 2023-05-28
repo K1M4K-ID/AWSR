@@ -79,7 +79,7 @@ if [ -d $path/nuclei-templates ]; then
 fi
 	
 # httpx
-if [[ -f ${PREFIX}/bin/httpx ]]; then
+if [[ -f /usr/bin/httpx ]] || [[ -f /usr/local/bin/httpx ]] || [[ -f ${PREFIX}/bin/httpx ]]; then
 	sleep 0.25
 	else
 	printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m httpx is not installed\n"
