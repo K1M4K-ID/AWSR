@@ -149,8 +149,7 @@ echo -e "\033[37;1m<./> masukan domain target, pakyu!! <./>"
 read -p "$(printf "\033[31;1m{\033[34;1m#\033[31;1m} $USER   "'\033[34;1m')" target
 printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m recon all subdomain..!! please wait 10-15 minutes..\n"
 # jika pake termux hapus berikan komentar pada awal assetfinder, contoh #assetfinder
-assetfinder -subs-only $target | tee -a $path/result/hasil.txt &> /dev/null
-subfinder -d $target -silent -o $path/result/hasil.txt &> /dev/null
+assetfinder -subs-only $target | tee -a subdomain.txt; subfinder -d $target -o subdomain.txt 
 cat result/hasil.txt | httpx -silent -td -ip -sc -probe -title -mc 200,403,301 -o $path/result/information-SUBDOMAIN
 printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m starting scanning..!! please wait 20-40 minutes..\n"
 nuclei -l $path/result/hasil.txt -t nuclei-templates -silent -attack-type pitchfork -severity medium, high, critical, unknown -output $path/result/vuln-hitler.txt
