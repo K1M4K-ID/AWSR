@@ -1,4 +1,4 @@
- # !/bin/bash
+# !/bin/bash
 # automate find vulnerabelity
 # create by K1M4K-ID
 # projectdiscovery
@@ -201,7 +201,7 @@ if [ -f $path/result/hasil.txt ]; then
 
 fi
 # ngopi file esec
-if [ -f /usr/local/bin ]; then
+if [ -f /usr/local/bin/esec ]; then
 			sleep 0.25
                         else
                         sleep 0.25
