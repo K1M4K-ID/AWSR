@@ -12,10 +12,6 @@ Don't Be Evil!!, Author tidak akan bertanggung jawab atas, perbuatan yang kalian
 
 # SCREENSHOOT
 
-
-![banner](https://github.com/K1M4K-ID/BDSM/assets/46388169/a878d4c2-8241-421d-9825-ee4c2e4e4c42)
-
-
 ![Screenshot from 2023-06-06 01-40-05](https://github.com/K1M4K-ID/BDSM/assets/46388169/29a6f597-d51f-475e-bab5-428c47e58a3d)
 ```
 Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder { LIT Course }
