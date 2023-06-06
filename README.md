@@ -26,17 +26,18 @@ Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder {
 * nuclei
 * golang
 * jq
+* katana
 
 ```
 
 
-## Instalation For Kali Linux, Parrot Os, Nethunter, Ubuntu, Debian, Android
+## Instalation For Kali Linux, Parrot Os, Nethunter, Ubuntu, Debian
 ```
 * cloning tools
 - git clone https://github.com/K1M4K-ID/BDSM
 
 * masuk directory dan set permission
-- cd BDSM && chmod +x esec
+- cd BDSM && chmod +x esec.sh
 
 * jalankan tools
 - bash esec
@@ -44,7 +45,7 @@ Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder {
 ```
 
 ## NOTE!!
-Jika anda menggunakan android, anda harus memberikan komentar pada bagian, assetfinder di line 152
+belom semua beres. masi experiment silakan contrib jika pengen nambah mwhehhehe
 
 
 
