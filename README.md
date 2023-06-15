@@ -44,6 +44,15 @@ Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder {
 
 ```
 
+## usage
+```
+search cve
+bash esec --target-domain --cve
+
+search wordpress
+bash esec --target-domain --wordpress
+```
+
 ## NOTE!!
 belom semua beres. masi experiment silakan contrib jika pengen nambah mwhehhehe
 
