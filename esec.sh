@@ -1,6 +1,7 @@
 # !/bin/bash
 # automate find vulnerabelity
 # create by K1M4K-ID
+# contrib with 0xkucing
 # projectdiscovery
 # settingan
 path=$(pwd)
