@@ -3,7 +3,7 @@
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/K1M4K-ID/BDSM?style=for-the-badge">
 
 ## Description
-BDSM merupakan sebuah tools yang di bangun, untuk melakukan sebuah automate pentesting terhadap sebuah web aplication, sumber @projectdiscovery
+AWSR ( automate web scanner ) merupakan sebuah tools yang di bangun, untuk melakukan sebuah automate pentesting terhadap sebuah web aplication, sumber @projectdiscovery
  
 ## Disclaimer
 Don't Be Evil!!, Author tidak akan bertanggung jawab atas, perbuatan yang kalian lakukan!!
