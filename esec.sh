@@ -356,6 +356,17 @@ if [[ -f /usr/bin/katana ]] || [[ -f /usr/local/bin/katana ]]; then
         cp ~/go/bin/katana /usr/bin &>/dev/null;cp ~/go/bin/katana /usr/local/bin &>/dev/null
         sleep 0.025s
 fi
+
+if [[ -f /usr/bin/subzy ]] || [[ -f /usr/local/bin/subzy ]]; then
+	sleep 0.25
+        else
+        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m subzy is not installed\n"
+        sleep 0.025s
+        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing subzy..\n"
+        go install -v github.com/LukaSikic/subzy@latest &> /dev/null
+        cp ~/go/bin/subzy /usr/bin &>/dev/null;cp ~/go/bin/subzy /usr/local/subzy &>/dev/null
+        sleep 0.025s
+fi
 sleep 0.1
 # jq
 if [[ -f /usr/bin/jq ]] || [[ -f /usr/local/bin/jq ]];then
@@ -452,6 +463,18 @@ fi
 
 }
 
+function tk(){
+subzy run --targets output/subdomain/subdomain.txt --verify_ssl | tee -a output/subdomain/hasil-takeover.txt
+# cek url ada apa engga
+if [ ! -s output/subdomain/hasil-takeover.txt ]; then
+    echo "Tidak ada result bro :("
+    exit 1
+else
+    echo -e "\nscanning for subdomain takeover selesai..\n"
+fi
+
+}
+
 function basic-scanner(){
 cat output/subdomain/subdomain.txt | sort | uniq | sed 's@^.*$@[--AWSR--] & @g' | nuclei -t templates/nuclei-templates/http/vulnerabilities/wordpress -silent -o output/vulnerability/vuln-wordpress.txt
 # cek url ada apa engga
@@ -505,6 +528,7 @@ cat << "EOF"
 --cve               use templates cves           
 --laravel	        use templates env laravel
 --js		        use templates js
+--tk                use for subdomain takeover with --domain
 
 EOF
 }
@@ -517,7 +541,7 @@ export verbose=0
 export rebuilt=0
 
 # get function arguments
-options=$(getopt -l "help,domain,wordpress,jomla,exposure,cve,js,laravel,exposure,katana" -o -a -- "$@")
+options=$(getopt -l "help,domain,wordpress,jomla,exposure,cve,js,laravel,exposure,katana,takeover" -o -a -- "$@")
 
 req
 
@@ -563,6 +587,11 @@ case "$1" in
     exploit
     cve-katana
     ;;    
+-tk|--takeover)
+
+    echo -e "\nscanning subdomain takeover..\n"
+    tk
+    ;;
 -r|--rebuild)
     export rebuild=1
     ;;
