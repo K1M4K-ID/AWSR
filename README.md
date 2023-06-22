@@ -49,6 +49,9 @@ Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder {
 search cve
 bash esec --domain url --cve
 
+search git exposure
+bash esec --domain url --exposure
+
 search wordpress
 bash esec --domain url --wordpress
 
