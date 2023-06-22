@@ -14,7 +14,7 @@ Don't Be Evil!!, Author tidak akan bertanggung jawab atas, perbuatan yang kalian
 ![banner2](https://github.com/K1M4K-ID/AWSR/assets/46388169/493bde14-9eda-4911-90d8-f017405cf75f)
 
 ```
-Author : K1M4K-ID Founder { HRA - Human Cyber Security }, Kucing Malas Founder { LIT Course }
+Author : K1M4K-ID Founder { HRA - Human Cyber Security }, 0xkucing { KucingHacking }
 ```
 
 
