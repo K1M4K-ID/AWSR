@@ -203,7 +203,7 @@ fi
 if [ -d $path/templates ]; then
 			sleep 0.25
 			else
-			printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m setup path & directory output!\n"
+			printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m setup path & directory templates!\n"
 			mkdir -p $path/templates
 fi
 # patch result subdomain
