@@ -260,7 +260,6 @@ if [ -d $path/templates/nuclei-templates ]; then
     cd $path/templates
 	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing nuclei-templates..\n"
 	git clone https://github.com/projectdiscovery/nuclei-templates &> /dev/null
-	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing successfully..!!\n"
 	sleep 2
 fi
 
@@ -271,7 +270,6 @@ if [ -d $path/templates/fuzzing-templates ]; then
     cd $path/templates
 	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing fuzzing-templates..\n"
 	git clone https://github.com/projectdiscovery/fuzzing-templates &> /dev/null
-	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing successfully..!!\n"
 	sleep 2
 fi
 
@@ -282,7 +280,6 @@ if [ -d $path/templates/JavaScript-Vulnerability-Scanner ]; then
     cd $path/templates
 	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing JavaScript-Vulnerability-Scanner..\n"
 	git clone https://github.com/0-Gram/JavaScript-Vulnerability-Scanner &> /dev/null
-	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing successfully..!!\n"
 	sleep 2
 fi
 
@@ -290,7 +287,6 @@ fi
 if [[ -f /usr/bin/go ]] || [[ -f /usr/local/bin/go ]];then
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m golang is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing golang..\n"
         sudo apt-get install golang-go -y &>/dev/null
@@ -302,7 +298,6 @@ sleep 0.1
 if [[ -f /usr/bin/httpx ]] || [[ -f /usr/local/bin/httpx ]]; then
 	sleep 0.25
 	else
-	printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m httpx is not installed\n"
 	sleep 0.025s
 	printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Httpx..\n"
 	go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest &> /dev/null
@@ -314,7 +309,6 @@ sleep 0.1
 if [[ -f /usr/bin/assetfinder ]] || [[ -f /usr/local/bin/assetfinder ]]; then
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m assetfinder is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Assetfinder..\n"
         go install -v github.com/tomnomnom/assetfinder@latest &> /dev/null
@@ -326,7 +320,6 @@ sleep 0.1
 if [[ -f /usr/bin/nuclei ]] || [[ -f /usr/local/bin/nuclei ]]; then
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m nuclei is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing Nuclei..\n"
         go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest &> /dev/null
@@ -337,8 +330,7 @@ sleep 0.1
 # subfinder
 if [[ -f /usr/bin/subfinder ]] || [[ -f /usr/local/bin/subfinder ]]; then
 	sleep 0.25
-        else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m subfinder is not installed\n"
+	else
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing subfinder..\n"
         go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest &> /dev/null
@@ -350,7 +342,6 @@ sleep 0.1
 if [[ -f /usr/bin/katana ]] || [[ -f /usr/local/bin/katana ]]; then
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m katana is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing katana..\n"
         go install github.com/projectdiscovery/katana/cmd/katana@latest &> /dev/null
@@ -361,7 +352,6 @@ fi
 if [[ -f /usr/bin/subzy ]] || [[ -f /usr/local/bin/subzy ]]; then
 	sleep 0.25
         else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m subzy is not installed\n"
         sleep 0.025s
         printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing subzy..\n"
         go install -v github.com/LukaSikic/subzy@latest &> /dev/null
@@ -381,17 +371,7 @@ if [[ -f /usr/bin/jq ]] || [[ -f /usr/local/bin/jq ]];then
 fi
 sleep 0.1
 
-if [[ -f /usr/bin/amass ]] || [[ -f /usr/local/bin/amass ]];then
-	sleep 0.25
-        else
-        printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m golang is not installed\n"
-        sleep 0.025s
-        printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[37;1m installing golang..\n"
-        sudo apt-get install amass -y &>/dev/null
-        sleep 0.025s
-fi
-sleep 0.1
-
+clear
 }
 
 fungsi(){
