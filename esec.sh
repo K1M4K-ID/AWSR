@@ -197,7 +197,7 @@ if [ -d $path/output ]; then
 			sleep 0.25
 			else
 			printf "\033[37;1m[\033[31;1m!\033[37;1m]\033[37;1m setup path & directory output!\n"
-			mkdir -p $path/ouput
+			mkdir -p $path/output
 fi
 # patch output
 if [ -d $path/templates ]; then
