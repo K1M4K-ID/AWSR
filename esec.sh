@@ -482,7 +482,6 @@ function wgets(){
 # crawling
 katana -list output/subdomain/subdomain.txt -f qurl -em js | tee output/result_js/js.txt
 # create directory. and get data
-mkdir -p "$directory"
 while IFS= read -r links
 do
     filename=$(basename "$links")
