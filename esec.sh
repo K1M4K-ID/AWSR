@@ -507,8 +507,8 @@ cat << "EOF"
 --wordpress         use templates wordpress
 --exposure          use templates exposure
 --cve               use templates cves           
---laravel	        use templates env laravel
---js		        use templates js
+--laravel	    use templates env laravel
+--js		    use templates js
 --tk                use for subdomain takeover with --domain
 
 EOF
