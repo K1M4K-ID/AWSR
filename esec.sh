@@ -16,9 +16,6 @@ waktu=$(printf "\33[36;1m$bul \033[31;1m$tan \033[37;1m$tim \033[31;1m$yer")
 # clear layar
 clear
 tput clear
-tput setaf 4
-tput blink
-tput cup 1 22
 tput civis
 # header
 logo1(){
@@ -193,6 +190,7 @@ remove
 sleep 1
 printf "\033[34;1m[\033[34;1m*\033[34;1m]\033[34;1m Thank you, for use this tools :) \033[37;1m\n"
 sleep 1
+tput cnorm
 exit;
 }
 # requirement
