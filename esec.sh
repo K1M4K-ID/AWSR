@@ -415,7 +415,7 @@ fi
 
 function exploit(){
 echo -e "\n[*] starting..scan sql,xss,lfi,xxe,ssrf,crlf,ssti,cmdi!! please wait 5-10 minutes\n$deffault"
-nuclei -l output/katana-result/crawling-katana.txt -t "fuzzing-templates" -silent -severity low,medium,high,critical,unknown -rl 05 -o output/vulnerability/vuln-sqlxss.txt
+nuclei -l output/katana-result/crawling-katana.txt -t "templates/fuzzing-templates" -silent -severity low,medium,high,critical,unknown -rl 05 -o output/vulnerability/vuln-sqlxss.txt
 if [ ! -s output/vulnerability/vuln-sqlxss.txt ]; then
     echo "Tidak ada result bro :("
 else
