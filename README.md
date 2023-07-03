@@ -57,6 +57,9 @@ bash esec --domain url --wordpress
 crawling katana single target
 bash esec --katana url
 ```
+## Demo
+url : https://youtube.com/shorts/QYYEjgMsAH0?feature=share3
+
 
 ## NOTE!!
 belom semua beres. masi experiment silakan contrib jika pengen nambah mwhehhehe
