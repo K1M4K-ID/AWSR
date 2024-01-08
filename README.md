@@ -33,10 +33,10 @@ Author : K1M4K-ID Founder { HRA - Human Cyber Security }, 0xkucing { KucingHacki
 ## Instalation For Kali Linux, Parrot Os, Nethunter, Ubuntu, Debian
 ```
 * cloning tools
-- git clone https://github.com/K1M4K-ID/BDSM
+- git clone https://github.com/K1M4K-ID/AWSR
 
 * masuk directory dan set permission
-- cd BDSM && chmod +x esec.sh
+- cd AWSR && chmod +x esec.sh
 
 * jalankan tools
 - bash esec
